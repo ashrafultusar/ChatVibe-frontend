@@ -34,7 +34,7 @@ const LandingPage = () => {
 
     return () => clearTimeout(timer); // clear timeout on cleanup
   }, [isSignedIn, isLoaded, user, isUserExists, loading]);
-
+ 
   return (
     <div>
       <Banner />
