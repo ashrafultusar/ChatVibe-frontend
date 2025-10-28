@@ -3,13 +3,13 @@ import React, { useEffect, useMemo } from "react";
 import Communication from "@/components/landingPage/Section/Communication";
 
 import Banner from "@/components/landingPage/Section/Banner";
-import Conversations from "@/components/landingPage/Section/Conversations";
+
 import { useUser } from "@clerk/clerk-react";
 import saveUserApi from "@/utilities/api-call/saveUserApi";
 import Ready from "@/components/landingPage/Section/Ready";
-import ScreenRecording from "@/components/landingPage/Section/ScreenRecording";
-import IndustrySolutionsSection from "@/components/landingPage/Section/IndustrySolutionsSection";
+
 import useGetAllUsers from "@/hooks/apiHooks/userHooks/useGetAllUser";
+import TestimonialSection from "@/components/landingPage/Section/TestimonialSection";
 
 const LandingPage = () => {
   const { isLoaded, isSignedIn, user } = useUser();
@@ -34,15 +34,12 @@ const LandingPage = () => {
 
     return () => clearTimeout(timer); // clear timeout on cleanup
   }, [isSignedIn, isLoaded, user, isUserExists, loading]);
- 
+
   return (
     <div>
       <Banner />
       <Communication />
-      <ScreenRecording />
-      <Conversations />
-      <IndustrySolutionsSection />
-      
+<TestimonialSection/>
       <Ready />
     </div>
   );
