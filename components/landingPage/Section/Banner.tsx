@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import Link from "next/link";
 
 const cards = [
   { img: "/Banner/10001.png" },
@@ -19,23 +20,25 @@ const cards = [
 
 export default function Banner() {
   return (
-    <div className="bg-gradient-to-b from-[#0A1A4A] via-[#1C3DAA] to-[#8A7DEB] text-white h-[90vh] w-full flex flex-col justify-center items-center px-4">
+    <div className="bg-gradient-to-b from-[#11a098] via-[#11a098] to-[#8A8DEB] text-white h-[90vh] w-full flex flex-col justify-center items-center px-4">
       {/* Headline */}
       <div className="text-center mb-10 px-4">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
-          Find out what’s possible <br className="hidden sm:block" /> when work connects
+          Find out what’s possible <br className="hidden sm:block" /> when work
+          connects
         </h1>
         <p className="text-gray-300 max-w-xl mx-auto mb-6 text-sm sm:text-base md:text-lg">
-          Whether you're chatting with teammates or supporting customers, Zoom makes it easier
-          to connect, collaborate, and reach goals — all with built-in AI doing the heavy lifting.
+          Whether you're chatting with teammates or supporting customers, ChatVibe
+          makes it easier to connect, collaborate, and reach goals — all with
+          built-in AI doing the heavy lifting.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <button className="bg-white text-blue-900 font-semibold px-6 py-2 rounded-lg hover:bg-gray-100 transition text-sm sm:text-base">
             Explore products
           </button>
-          <button className="bg-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-500 transition text-sm sm:text-base">
-            Find your plan
-          </button>
+          <Link href={`/dashboard`}>
+            <button className="bg-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-500 transition text-sm sm:text-base">Get Started</button>
+          </Link>
         </div>
       </div>
 
