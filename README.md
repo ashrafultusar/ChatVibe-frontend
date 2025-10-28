@@ -1,4 +1,4 @@
-# Project [ChatVibe](https://chat-vibe-ashy.vercel.app)
+# Project [ChatVibe](https://chatvibe-two.vercel.app)
 
 This is project [ChatVibe](https://chat-vibe-ashy.vercel.app) created by team MERNMaestro.
 
