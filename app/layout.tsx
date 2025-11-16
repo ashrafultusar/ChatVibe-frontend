@@ -48,7 +48,7 @@ export default function RootLayout({
           },
         }}>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} bg-dark-2 antialiased`}>
+          className={`${geistSans.variable} ${geistMono.variable} `}>
           <RootLayoutComponent children={children} />
           <Toaster />
         </body>

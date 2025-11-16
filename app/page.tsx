@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useMemo } from "react";
-import Communication from "@/components/landingPage/Section/Communication";
 
 import Banner from "@/components/landingPage/Section/Banner";
 
@@ -9,7 +8,12 @@ import saveUserApi from "@/utilities/api-call/saveUserApi";
 import Ready from "@/components/landingPage/Section/Ready";
 
 import useGetAllUsers from "@/hooks/apiHooks/userHooks/useGetAllUser";
-import TestimonialSection from "@/components/landingPage/Section/TestimonialSection";
+
+import Slider from "@/components/landingPage/Section/Slider";
+import StatsBanner from "@/components/landingPage/Section/StatsBanner";
+import FeaturesSection from "@/components/landingPage/Section/FeaturesSection";
+import StepsSection from "@/components/landingPage/Section/StepsSection";
+import PricingPlans from "@/components/landingPage/Section/PricingPlans";
 
 const LandingPage = () => {
   const { isLoaded, isSignedIn, user } = useUser();
@@ -38,8 +42,13 @@ const LandingPage = () => {
   return (
     <div>
       <Banner />
-      <Communication />
-<TestimonialSection/>
+      <Slider/>
+      <StatsBanner/>
+      <FeaturesSection/>
+      <StepsSection/>
+      <PricingPlans/>
+   
+
       <Ready />
     </div>
   );

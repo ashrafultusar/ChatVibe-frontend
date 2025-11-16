@@ -1,79 +1,78 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
-import Link from "next/link";
+import Image from "next/image";
 
-const cards = [
-  { img: "/Banner/10001.png" },
-  { img: "/Banner/10002.png" },
-  { img: "/Banner/10003.png" },
-  { img: "/Banner/10004.png" },
-  { img: "/Banner/10005.png" },
-  { img: "/Banner/10006.png" },
-  { img: "/Banner/10007.png" },
-  { img: "/Banner/10008.png" },
-  { img: "/Banner/10009.png" },
-];
-
-export default function Banner() {
+const HeroSection = () => {
   return (
-    <div className="bg-gradient-to-b from-[#11a098] via-[#11a098] to-[#8A8DEB] text-white h-[90vh] w-full flex flex-col justify-center items-center px-4">
-      {/* Headline */}
-      <div className="text-center mb-10 px-4">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
-          Find out what’s possible <br className="hidden sm:block" /> when work
-          connects
+    <section className="relative bg-white text-gray-900 py-20 px-6 md:px-12 lg:px-20 flex flex-col md:flex-row items-center justify-between gap-12">
+      {/* Left content */}
+      <div className="flex-1 space-y-6 max-w-xl">
+        {/* Badge */}
+        <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-pink-100 px-4 py-2 rounded-full shadow-sm text-sm font-medium text-purple-700">
+          <span>🚀</span>
+          <span>Now with AI-powered features</span>
+        </div>
+
+        {/* Headline */}
+        <h1 className="text-5xl md:text-6xl font-bold leading-tight text-gray-900">
+          Connect with{" "}
+          <span className="block md:inline text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-600">
+            Anyone, Anywhere
+          </span>
         </h1>
-        <p className="text-gray-300 max-w-xl mx-auto mb-6 text-sm sm:text-base md:text-lg">
-          Whether you're chatting with teammates or supporting customers, ChatVibe
-          makes it easier to connect, collaborate, and reach goals — all with
-          built-in AI doing the heavy lifting.
+
+        {/* Description */}
+        <p className="text-gray-600 text-lg leading-relaxed">
+          Experience crystal-clear video conferencing with ChatVibe. Host
+          unlimited meetings, share your screen, and collaborate seamlessly with
+          teams around the globe.
         </p>
-        <div className="flex flex-wrap justify-center gap-4">
-          <button className="bg-white text-blue-900 font-semibold px-6 py-2 rounded-lg hover:bg-gray-100 transition text-sm sm:text-base">
-            Explore products
+
+        {/* Buttons */}
+        <div className="flex flex-wrap items-center gap-4 pt-2">
+          <button className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:opacity-90 transition-all">
+            <span>🎥</span> Start Free Meeting
           </button>
-          <Link href={`/dashboard`}>
-            <button className="bg-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-500 transition text-sm sm:text-base">Get Started</button>
-          </Link>
+          <button className="border border-purple-400 text-purple-600 font-semibold px-6 py-3 rounded-lg hover:bg-purple-50 transition-all">
+            Watch Demo
+          </button>
+        </div>
+
+        {/* Trusted Section */}
+        <div className="flex items-center gap-3 pt-6">
+          {/* Avatars */}
+          <div className="flex -space-x-2">
+            <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-500"></div>
+            <div className="w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-pink-500"></div>
+            <div className="w-8 h-8 rounded-full bg-gradient-to-r from-pink-500 to-yellow-500 flex items-center justify-center text-white text-sm font-semibold">
+              10M+
+            </div>
+          </div>
+
+          {/* Rating */}
+          <div>
+            <div className="flex text-yellow-400 text-sm">
+              ★★★★★
+            </div>
+            <p className="text-sm text-gray-500">Trusted by 10M+ users</p>
+          </div>
         </div>
       </div>
 
-      {/* Swiper Slider */}
-      <div className="w-full overflow-hidden">
-        <Swiper
-          modules={[Autoplay, Pagination]}
-          spaceBetween={24}
-          slidesPerView={1}
-          loop={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          breakpoints={{
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-          pagination={{ clickable: true }}
-          grabCursor={true}
-          className="px-6"
-        >
-          {cards.map((card, idx) => (
-            <SwiperSlide key={idx}>
-              <div className="w-full bg-[#10194E] rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
-                <img
-                  src={card.img}
-                  alt={`banner ${idx}`}
-                  className="w-full h-72 sm:h-80 md:h-96 object-cover"
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+      {/* Right side image */}
+      <div className="flex-1 relative">
+        <div className="rounded-3xl overflow-hidden shadow-2xl shadow-purple-200/60">
+          <Image
+            src={'/Banner/10001.jpeg'}
+            alt="Conference"
+            width={700}
+            height={500}
+            className="rounded-3xl object-cover"
+          />
+        </div>
       </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default HeroSection;
