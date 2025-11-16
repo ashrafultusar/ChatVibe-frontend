@@ -42,13 +42,11 @@ const LandingPage = () => {
   return (
     <div>
       <Banner />
-      <Slider/>
-      <StatsBanner/>
-      <FeaturesSection/>
-      <StepsSection/>
-      <PricingPlans/>
-   
-
+      <Slider />
+      <StatsBanner />
+      <FeaturesSection />
+      <StepsSection />
+      <PricingPlans />
       <Ready />
     </div>
   );

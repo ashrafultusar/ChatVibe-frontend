@@ -1,7 +1,8 @@
 export default function StatsBanner() {
     return (
-      <div className="w-full py-10 bg-gradient-to-r from-[#6A5AE0] to-[#8A5CF6] flex justify-center">
-        <div className="w-full max-w-6xl grid grid-cols-2 sm:grid-cols-4 text-center text-white gap-6 px-4">
+    <div className="my-20">
+        <div className="w-full py-10 bg-gradient-to-r from-[#6A5AE0] to-[#8A5CF6] flex justify-center">
+        <div className="w-full  grid grid-cols-2 sm:grid-cols-4 text-center text-white gap-6 px-4">
           
           <div>
             <h2 className="text-3xl font-bold sm:text-4xl">10M+</h2>
@@ -25,6 +26,7 @@ export default function StatsBanner() {
   
         </div>
       </div>
+    </div>
     );
   }
   

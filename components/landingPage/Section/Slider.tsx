@@ -19,11 +19,11 @@ const cards = [
 
 export default function Slider() {
   return (
-    <div className="text-white h-[90vh] w-full flex justify-center items-center px-4">
+    <div className="text-white w-full flex justify-center items-center px-4 py-10">
       <div className="w-full overflow-hidden">
         <Swiper
           modules={[Autoplay, Pagination]}
-          spaceBetween={24}
+          spaceBetween={28}
           slidesPerView={1}
           loop={true}
           autoplay={{
@@ -40,11 +40,16 @@ export default function Slider() {
         >
           {cards.map((card, idx) => (
             <SwiperSlide key={idx}>
-              <div className="w-full bg-[#10194E] rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
+              <div className="bg-[#10194E] rounded-2xl overflow-hidden shadow-xl w-full">
                 <img
                   src={card.img}
                   alt={`banner ${idx}`}
-                  className="w-full h-72 sm:h-80 md:h-96 object-cover"
+                  className="w-full 
+                    h-[350px]          /* Increased from 72 → now bigger */
+                    sm:h-[400px]       /* Bigger on small devices */
+                    md:h-[450px]       /* Bigger on medium screens */
+                    lg:h-[500px]       /* Large height for desktops */
+                    object-cover"
                 />
               </div>
             </SwiperSlide>

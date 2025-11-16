@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Rocket } from "lucide-react";
+import Link from "next/link";
 
 export default function CTASection() {
   return (
@@ -15,9 +16,11 @@ export default function CTASection() {
 
       <div className="flex flex-col md:flex-row gap-4">
         <motion.div whileHover={{ scale: 1.05 }}>
+
+        <Link href={'/dashboard'}>
           <Button className="bg-white text-purple-600 font-semibold px-8 py-6 text-base rounded-xl shadow-md flex items-center gap-2">
             <Rocket className="w-5 h-5" /> Start Free Trial
-          </Button>
+          </Button></Link>
         </motion.div>
 
         <motion.div whileHover={{ scale: 1.05 }}>

@@ -8,9 +8,8 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { BsChatSquareText } from "react-icons/bs";
-import { IoNotifications } from "react-icons/io5";
 import MessageUserList from "@/components/messageComponents/MessageUserList";
-import Notification from "@/components/messageComponents/Notification";
+
 
 const Nav = () => {
   const [isDropDown, setIsDropDown] = useState(false);
@@ -32,8 +31,8 @@ const Nav = () => {
 
   const navRoutes = [
     { label: "Home", address: "/" },
-    { label: "Pricing", address: "/pricing" },
-    { label: "About", address: "/#about" },
+  
+
     { label: "Contact", address: "/contact" },
     { label: "Dashboard", address: "/dashboard" },
   ];
@@ -142,8 +141,7 @@ const Nav = () => {
             <li>
               <Link href="/sign-in">
                 <Button
-                  className=" text-white bg-main-2  px-7 hover:bg-transparent hover:border
-  transition-all duration-300 ease-in-out transform hover:scale-105"
+                  className=" text-white bg-[#11a0a9]  px-7"
                 >
                   Login
                 </Button>
