@@ -1,1 +1,1 @@
-Live URL: https://chatvibe-two.vercel.app
+Live URL:  https://chat-vibe-virid.vercel.app
