@@ -5,33 +5,66 @@ import Link from "next/link";
 
 export default function CTASection() {
   return (
-    <div className="w-full py-24 px-6 bg-gradient-to-r from-purple-500 to-indigo-500 flex flex-col items-center text-center rounded-3xl shadow-lg">
-      <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-        Ready to Transform Your Meetings?
-      </h2>
+    <section className="w-full px-4 my-20">
+      <div
+        className="
+          relative max-w-7xl mx-auto
+          rounded-3xl overflow-hidden
+          bg-white/5 backdrop-blur-md
+          border border-white/10
+          shadow-2xl shadow-purple-500/20
+          py-20 px-6 md:px-12
+          text-center
+        "
+      >
+        {/* Soft glow background */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute -top-32 -left-32 w-96 h-96 bg-purple-600/20 blur-3xl rounded-full" />
+          <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-blue-600/20 blur-3xl rounded-full" />
+        </div>
 
-      <p className="text-white/90 max-w-2xl mb-8 text-lg">
-        Join millions of users worldwide who trust ChatVibe for their video conferencing needs
-      </p>
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          Ready to Transform Your Meetings?
+        </h2>
 
-      <div className="flex flex-col md:flex-row gap-4">
-        <motion.div whileHover={{ scale: 1.05 }}>
+        <p className="text-gray-300 max-w-2xl mx-auto mb-10 text-lg">
+          Join millions of users worldwide who trust ChatVibe for their video conferencing needs
+        </p>
 
-        <Link href={'/dashboard'}>
-          <Button className="bg-white text-purple-600 font-semibold px-8 py-6 text-base rounded-xl shadow-md flex items-center gap-2">
-            <Rocket className="w-5 h-5" /> Start Free Trial
-          </Button></Link>
-        </motion.div>
+        <div className="flex flex-col md:flex-row gap-4 justify-center">
+          <motion.div whileHover={{ scale: 1.05 }}>
+            <Link href="/dashboard">
+              <Button
+                className="
+                  bg-gradient-to-r from-purple-600 to-blue-600
+                  hover:opacity-90
+                  text-white font-semibold
+                  px-8 py-6 text-base rounded-xl
+                  shadow-lg shadow-purple-500/20
+                  flex items-center gap-2
+                "
+              >
+                <Rocket className="w-5 h-5" /> Start Free Trial
+              </Button>
+            </Link>
+          </motion.div>
 
-        <motion.div whileHover={{ scale: 1.05 }}>
-          <Button
-            variant="outline"
-            className="border-white text-white px-8 py-6 text-base rounded-xl hover:bg-white/10"
-          >
-            Schedule Demo
-          </Button>
-        </motion.div>
+          <motion.div whileHover={{ scale: 1.05 }}>
+            <Button
+              variant="outline"
+              className="
+                bg-white/5
+                border border-white/20
+                text-white
+                px-8 py-6 text-base rounded-xl
+                hover:bg-white/10
+              "
+            >
+              Schedule Demo
+            </Button>
+          </motion.div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

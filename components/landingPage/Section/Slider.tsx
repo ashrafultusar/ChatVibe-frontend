@@ -19,7 +19,7 @@ const cards = [
 
 export default function Slider() {
   return (
-    <div className="text-white w-full flex justify-center items-center px-4 py-10">
+    <div className="text-white max-w-7xl mx-auto flex justify-center items-center px-4 py-10">
       <div className="w-full overflow-hidden">
         <Swiper
           modules={[Autoplay, Pagination]}
